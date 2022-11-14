@@ -5,7 +5,7 @@ requirements = [
     'srt',
     'moviepy',
     'opencc-python-reimplemented',
-    'whisper @ git+https://github.com/openai/whisper.git'
+    'whisper'
 ]
 
 init_fn = os.path.join(os.path.dirname(__file__), 'autocut', '__init__.py')
