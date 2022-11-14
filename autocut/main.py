@@ -14,13 +14,13 @@ def main():
     parser.add_argument('inputs', type=str, nargs='+',
                         help='Inputs filenames/folders')
     parser.add_argument('-t', '--transcribe', help='Transcribe videos/audio into subtitles',
-        action=argparse.BooleanOptionalAction)
+        action='store_true',)
     parser.add_argument('-c', '--cut', help='Cut a video based on subtitles',
-        action=argparse.BooleanOptionalAction)
+        action='store_true',)
     parser.add_argument('-d', '--daemon', help='Monitor a folder to trascribe and cut',
-        action=argparse.BooleanOptionalAction)
+        action='store_true',)
     parser.add_argument('-s', help='Convert .srt to a compact format for easier editting',
-        action=argparse.BooleanOptionalAction)
+        action='store_true',)
     parser.add_argument('--prompt', type=str, default='',
         help='initial prompt feed into whisper')
     parser.add_argument('--whisper-model', type=str, default='small',
@@ -29,9 +29,9 @@ def main():
     parser.add_argument('--bitrate', type=str, default='10m',
         help='The bitrate to export the cutted video, such as 10m, 1m, or 500k')
     parser.add_argument('--vad', help='If or not use VAD',
-        action=argparse.BooleanOptionalAction)
+        action='store_true',)
     parser.add_argument('--force', help='Force write even if files exist',
-        action=argparse.BooleanOptionalAction)
+        action='store_true',)
     parser.add_argument('--encoding', type=str, default='utf-8',
         help='Document encoding format')
 

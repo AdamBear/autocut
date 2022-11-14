@@ -19,7 +19,7 @@ setup(
     name='autocut',
     version=__version__,
     install_requires=requirements,
-    python_requires='>=3.9',
+    python_requires='>=3.7',
     packages=find_packages(),
     entry_points={
         'console_scripts': [
